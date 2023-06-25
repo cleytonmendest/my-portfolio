@@ -1,0 +1,133 @@
+.project__main-container {
+    width: 100%;
+
+    p {
+        max-width: 796px;
+        margin-bottom: 50px;
+
+        span {
+            transition: all ease .5s;
+            position: relative;
+            font-style: italic;
+
+            &.highlighted{
+                text-decoration: underline;
+                color: #cccccc;
+            }
+
+            @media screen and (min-width:1024px){
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 80%;
+                    transition: all ease .5s;
+                    width: 0%;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                }
+    
+                &.highlighted {
+                    position: relative;
+                    text-decoration: none;
+                    transition: all ease .5s;
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        height: 80%;
+                        width: 100%;
+                        transition: all ease .5s;
+                        border-bottom: 1px solid #cccccc;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .projects__brands {
+        max-width: 800px;
+        margin: auto;
+
+        .projects__brands-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+
+            @media screen and (min-width: 1024px) {
+                display: grid;
+                grid-template-columns: 1fr .5fr 1fr .5fr 1fr .5fr 1fr .5fr 1fr .5fr 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+
+                .mont-blanc {
+                    grid-area: 1 / 1 / 2 / 4;
+                }
+
+                .estrela {
+                    grid-area: 1 / 5 / 2 / 8;
+                }
+
+                .skelt {
+                    grid-area: 1 / 9 / 2 / 12;
+                }
+
+                .creamy {
+                    grid-area: 2 / 3 / 3 / 6;
+                }
+
+                .vitaminese {
+                    grid-area: 3 / 1 / 4 / 4;
+                }
+
+                .calvin {
+                    grid-area: 3 / 5 / 4 / 8;
+                }
+
+                .dior {
+                    grid-area: 3 / 9 / 4 / 12;
+                }
+
+                .swarovski {
+                    grid-area: 2 / 7 / 3 / 10;
+                }
+
+                .projects__brand-wrapper {
+                    opacity: .2;
+                    filter: grayscale(1);
+                    transition: all ease .3s;
+
+                    &:hover {
+                        opacity: 1;
+                        filter: grayscale(0);
+                    }
+                }
+            }
+
+            .projects__brand-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                img,
+                svg {
+                    width: 100%;
+                    max-width: 250px;
+
+                }
+                &.dior{
+                    max-width: 170px;
+                }
+            }
+        }
+    }
+}

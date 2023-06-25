@@ -3,7 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `my-port`,
+    siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [],
-}
+  plugins: ["gatsby-plugin-sass"]
+};
